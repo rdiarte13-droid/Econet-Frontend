@@ -7,7 +7,12 @@ const initialCommunities = [
   { id: 3, name: 'Recicla Juntos', members: '860 activistas', focus: 'Recolección y reutilización' },
 ];
 
-function Comunidades() {
+function Comunidades({
+  eyebrow = 'Comunidades',
+  title = 'Personas y barrios en acción',
+  headingLevel = 'h2',
+}) {
+  const Heading = headingLevel;
   const [communities, setCommunities] = useState(initialCommunities);
   const [formData, setFormData] = useState({
     name: '',
@@ -49,11 +54,11 @@ function Comunidades() {
   };
 
   return (
-    <section id="comunidades" className="communities-section">
+    <section id="comunidades" className="communities-section py-5">
       <Container>
         <div className="section-heading text-center mb-5">
-          <p className="eyebrow">Comunidades</p>
-          <h2>Personas y barrios en acción</h2>
+          <p className="eyebrow">{eyebrow}</p>
+          <Heading>{title}</Heading>
         </div>
 
         <Form onSubmit={handleAddCommunity} className="community-form mb-5">
@@ -110,8 +115,8 @@ function Comunidades() {
             <Col md={4} key={community.id}>
               <Card className="community-card h-100 border-0 shadow-sm">
                 <Card.Body className="p-4">
-                  <div className="community-header">
-                    <div className="community-badge">EcoNet</div>
+                  <div className="d-flex align-items-center justify-content-between gap-3 mb-3">
+                    <div className="community-badge d-inline-block">EcoNet</div>
                     <Button
                       variant="link"
                       className="community-delete"
@@ -122,7 +127,7 @@ function Comunidades() {
                   </div>
                   <Card.Title as="h3">{community.name}</Card.Title>
                   <Card.Text className="text-muted">{community.members}</Card.Text>
-                  <span className="community-focus">{community.focus}</span>
+                  <span className="community-focus d-inline-block mt-3">{community.focus}</span>
                 </Card.Body>
               </Card>
             </Col>

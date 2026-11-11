@@ -6,19 +6,42 @@ import Carrousel from './components/carrousel';
 import Comunidades from './components/comunidades';
 import Contacto from './components/contacto';
 import Footer from './components/footer';
+import { Route, Routes } from 'react-router-dom';
+import ComunidadesPage from './Pages/comunidades';
+import ForoPage from './Pages/foro';
+
 
 function App() {
   return (
     <>
       <Navbar />
-      <main>
-        <Inicio />
-        <PuntosVerdes />
-        <Informacion />
-        <Carrousel />
-        <Comunidades />
-        <Contacto />
-      </main>
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <main>
+              <Inicio />
+              <PuntosVerdes />
+              <Informacion />
+              <Carrousel />
+              <Comunidades />
+              <Contacto />
+            </main>
+          }
+        />
+
+        <Route
+          path="/comunidades"
+          element={<ComunidadesPage />}
+        />
+
+        <Route
+          path="/foro"
+          element={<ForoPage />}
+        />
+      </Routes>
+
       <Footer />
     </>
   );

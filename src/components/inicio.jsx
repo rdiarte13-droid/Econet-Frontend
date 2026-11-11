@@ -2,7 +2,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 
 function Inicio() {
   return (
-    <section id="inicio" className="hero-section">
+    <section id="inicio" className="hero-section py-0">
       <Container>
         <Row className="align-items-center min-vh-100 py-5">
           <Col lg={6} className="pe-lg-5">
@@ -24,7 +24,7 @@ function Inicio() {
 
           <Col lg={6} className="text-center">
             <div className="hero-card shadow-lg">
-              <div className="hero-badge">+12.000</div>
+              <div className="hero-badge d-inline-block">+12.000</div>
               <h3>Acciones sostenibles activas</h3>
               <p>
                 Recolección, educación ambiental, huertos urbanos y voluntariado,
