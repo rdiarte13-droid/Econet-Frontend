@@ -7,7 +7,12 @@ const initialCommunities = [
   { id: 3, name: 'Recicla Juntos', members: '860 activistas', focus: 'Recolección y reutilización' },
 ];
 
-function Comunidades() {
+function Comunidades({
+  eyebrow = 'Comunidades',
+  title = 'Personas y barrios en acción',
+  headingLevel = 'h2',
+}) {
+  const Heading = headingLevel;
   const [communities, setCommunities] = useState(initialCommunities);
   const [formData, setFormData] = useState({
     name: '',
@@ -52,8 +57,8 @@ function Comunidades() {
     <section id="comunidades" className="communities-section">
       <Container>
         <div className="section-heading text-center mb-5">
-          <p className="eyebrow">Comunidades</p>
-          <h2>Personas y barrios en acción</h2>
+          <p className="eyebrow">{eyebrow}</p>
+          <Heading>{title}</Heading>
         </div>
 
         <Form onSubmit={handleAddCommunity} className="community-form mb-5">
