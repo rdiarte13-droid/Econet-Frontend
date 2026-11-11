@@ -21,10 +21,6 @@ img {
   max-width: 100%;
 }
 
-section {
-  padding: 100px 0;
-}
-
 .eyebrow {
   margin-bottom: 1rem;
   color: var(--eco-green);
@@ -61,13 +57,28 @@ section {
 }
 
 .hero-badge {
-  display: inline-block;
   background: rgba(29, 143, 95, 0.12);
   color: var(--eco-green-dark);
   font-weight: 700;
   border-radius: 999px;
   padding: 0.5rem 0.9rem;
   margin-bottom: 1rem;
+}
+
+.green-points-section {
+  background: #ffffff;
+}
+
+.green-points-map-wrap {
+  overflow: hidden;
+  border: 1px solid rgba(29, 143, 95, 0.16);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(15, 93, 58, 0.1);
+}
+
+.green-points-map {
+  width: 100%;
+  height: 480px;
 }
 
 .feature-card,
@@ -79,8 +90,6 @@ section {
 .feature-icon {
   width: 48px;
   height: 48px;
-  display: grid;
-  place-items: center;
   border-radius: 14px;
   background: rgba(29, 143, 95, 0.12);
   color: var(--eco-green);
@@ -93,20 +102,65 @@ section {
 }
 
 .eco-carousel .carousel-panel {
+  position: relative;
   background: linear-gradient(135deg, var(--eco-green) 0%, var(--eco-green-dark) 100%);
   color: #ffffff;
   border-radius: 30px;
-  min-height: 280px;
-  padding: 3rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  overflow: hidden;
+  min-height: 320px;
 }
 
-.eco-carousel .carousel-panel h3 {
+.eco-carousel .carousel-panel::before {
+  content: '';
+  position: absolute;
+  inset: 1.2rem auto 1.2rem 1.2rem;
+  width: 42%;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+.eco-carousel .carousel-content {
+  position: relative;
+  z-index: 1;
+  min-height: 320px;
+}
+
+.eco-carousel .carousel-copy {
+  flex: 1;
+}
+
+.eco-carousel .carousel-copy h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.eco-carousel .carousel-copy p {
+  margin: 0;
+  max-width: 32rem;
+  line-height: 1.7;
+}
+
+.eco-carousel .carousel-image-wrap {
+  position: relative;
+  flex: 0 0 46%;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 0 30px 30px 0;
+  box-shadow: -14px 0 30px rgba(15, 93, 58, 0.16);
+}
+
+.eco-carousel .carousel-image-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: none;
+  transition: none;
 }
 
 .eco-carousel .carousel-indicators button {
@@ -118,16 +172,20 @@ section {
   opacity: 1;
 }
 
-.community-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+@media (max-width: 767px) {
+  .eco-carousel .carousel-panel::before {
+    display: none;
+  }
+
+  .eco-carousel .carousel-image-wrap {
+    flex-basis: auto;
+    min-height: 220px;
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+  }
 }
 
 .community-badge {
-  display: inline-block;
   background: rgba(29, 143, 95, 0.1);
   color: var(--eco-green-dark);
   font-size: 0.7rem;
@@ -150,8 +208,6 @@ section {
 }
 
 .community-focus {
-  display: inline-block;
-  margin-top: 0.75rem;
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
   background: #edf8f2;
@@ -182,11 +238,11 @@ section {
 }
 
 @media (max-width: 991px) {
-  section {
-    padding: 80px 0;
-  }
-
   .hero-section h1 {
     font-size: 2.5rem;
+  }
+
+  .green-points-map {
+    height: 380px;
   }
 }
