@@ -1,10 +1,11 @@
 import { Container, Nav, Navbar as BootstrapNavbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <BootstrapNavbar bg="dark" variant="dark" expand="lg" sticky="top" className="shadow-sm">
       <Container>
-        <BootstrapNavbar.Brand href="#inicio" className="fw-bold text-success">
+        <BootstrapNavbar.Brand as={Link} to="/" className="fw-bold text-success">
           EcoNet
         </BootstrapNavbar.Brand>
 
@@ -15,7 +16,8 @@ function Navbar() {
             <Nav.Link href="#inicio">Inicio</Nav.Link>
             <Nav.Link href="#informacion">Información</Nav.Link>
             <Nav.Link href="#lugares">Lugares</Nav.Link>
-            <Nav.Link href="#comunidades">Comunidades</Nav.Link>
+            <Nav.Link as={Link} to="/comunidades">Comunidades</Nav.Link>
+            <Nav.Link as={Link} to="/foro">Foro</Nav.Link>
             <Nav.Link href="#contacto">Contacto</Nav.Link>
           </Nav>
         </BootstrapNavbar.Collapse>
