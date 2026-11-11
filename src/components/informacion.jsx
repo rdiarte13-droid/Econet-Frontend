@@ -17,7 +17,7 @@ const features = [
 
 function Informacion() {
   return (
-    <section id="informacion" className="info-section">
+    <section id="informacion" className="info-section py-5">
       <Container>
         <div className="section-heading text-center mb-5">
           <p className="eyebrow">¿Cómo trabajamos?</p>
@@ -29,7 +29,7 @@ function Informacion() {
             <Col md={4} key={feature.title}>
               <Card className="h-100 feature-card border-0 shadow-sm">
                 <Card.Body className="p-4">
-                  <div className="feature-icon">●</div>
+                  <div className="feature-icon d-inline-flex align-items-center justify-content-center">●</div>
                   <Card.Title as="h3">{feature.title}</Card.Title>
                   <Card.Text className="text-muted">{feature.text}</Card.Text>
                 </Card.Body>

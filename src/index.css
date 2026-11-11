@@ -21,10 +21,6 @@ img {
   max-width: 100%;
 }
 
-section {
-  padding: 100px 0;
-}
-
 .eyebrow {
   margin-bottom: 1rem;
   color: var(--eco-green);
@@ -61,7 +57,6 @@ section {
 }
 
 .hero-badge {
-  display: inline-block;
   background: rgba(29, 143, 95, 0.12);
   color: var(--eco-green-dark);
   font-weight: 700;
@@ -79,8 +74,6 @@ section {
 .feature-icon {
   width: 48px;
   height: 48px;
-  display: grid;
-  place-items: center;
   border-radius: 14px;
   background: rgba(29, 143, 95, 0.12);
   color: var(--eco-green);
@@ -116,17 +109,11 @@ section {
 .eco-carousel .carousel-content {
   position: relative;
   z-index: 1;
-  display: flex;
   min-height: 320px;
 }
 
 .eco-carousel .carousel-copy {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 3rem 2.5rem;
-  text-align: left;
 }
 
 .eco-carousel .carousel-copy h3 {
@@ -174,19 +161,6 @@ section {
     display: none;
   }
 
-  .eco-carousel .carousel-content {
-    flex-direction: column;
-  }
-
-  .eco-carousel .carousel-copy {
-    padding: 2rem 1.5rem 1rem;
-    text-align: center;
-  }
-
-  .eco-carousel .carousel-copy p {
-    max-width: 100%;
-  }
-
   .eco-carousel .carousel-image-wrap {
     flex-basis: auto;
     min-height: 220px;
@@ -195,16 +169,7 @@ section {
   }
 }
 
-.community-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
 .community-badge {
-  display: inline-block;
   background: rgba(29, 143, 95, 0.1);
   color: var(--eco-green-dark);
   font-size: 0.7rem;
@@ -227,8 +192,6 @@ section {
 }
 
 .community-focus {
-  display: inline-block;
-  margin-top: 0.75rem;
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
   background: #edf8f2;
@@ -259,10 +222,6 @@ section {
 }
 
 @media (max-width: 991px) {
-  section {
-    padding: 80px 0;
-  }
-
   .hero-section h1 {
     font-size: 2.5rem;
   }

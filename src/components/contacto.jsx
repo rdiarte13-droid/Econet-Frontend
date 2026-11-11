@@ -2,7 +2,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 function Contacto() {
   return (
-    <section id="contacto" className="contact-section">
+    <section id="contacto" className="contact-section py-5">
       <Container>
         <Row className="align-items-center g-5">
           <Col lg={6}>

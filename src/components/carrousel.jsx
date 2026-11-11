@@ -23,7 +23,7 @@ const slides = [
 
 function Carrousel() {
   return (
-    <section id="lugares" className="carousel-section">
+    <section id="lugares" className="carousel-section py-5">
       <Container>
         <div className="section-heading text-center mb-4">
           <p className="eyebrow">Lugares de impacto</p>
@@ -36,8 +36,8 @@ function Carrousel() {
               {slides.map((slide) => (
                 <Carousel.Item key={slide.title}>
                   <div className="carousel-panel">
-                    <div className="carousel-content">
-                      <div className="carousel-copy">
+                    <div className="carousel-content d-flex flex-column flex-md-row">
+                      <div className="carousel-copy d-flex flex-column justify-content-center text-center text-md-start p-4 p-md-5">
                         <h3>{slide.title}</h3>
                         <p>{slide.text}</p>
                       </div>
