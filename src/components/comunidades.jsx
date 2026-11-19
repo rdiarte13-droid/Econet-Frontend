@@ -56,12 +56,12 @@ function Comunidades({
   return (
     <section id="comunidades" className="communities-section py-5">
       <Container>
-        <div className="section-heading text-center mb-5">
-          <p className="eyebrow">{eyebrow}</p>
-          <Heading>{title}</Heading>
+        <div className="text-center mb-5">
+          <p className="text-success text-uppercase fw-bold small">{eyebrow}</p>
+          <Heading className="display-6 fw-bold">{title}</Heading>
         </div>
 
-        <Form onSubmit={handleAddCommunity} className="community-form mb-5">
+        <Form onSubmit={handleAddCommunity} className="bg-body-tertiary border rounded-4 p-4 mb-5">
           <Row className="g-3 align-items-end">
             <Col md={4}>
               <Form.Group>
@@ -113,13 +113,15 @@ function Comunidades({
         <Row className="g-4">
           {communities.map((community) => (
             <Col md={4} key={community.id}>
-              <Card className="community-card h-100 border-0 shadow-sm">
+              <Card className="h-100 rounded-4 border-0 shadow-sm">
                 <Card.Body className="p-4">
                   <div className="d-flex align-items-center justify-content-between gap-3 mb-3">
-                    <div className="community-badge d-inline-block">EcoNet</div>
+                    <span className="badge rounded-pill bg-success-subtle text-success-emphasis px-3 py-2">
+                      EcoNet
+                    </span>
                     <Button
                       variant="link"
-                      className="community-delete"
+                      className="text-danger text-decoration-none p-0 fw-semibold"
                       onClick={() => handleRemoveCommunity(community.id)}
                     >
                       Eliminar
@@ -127,7 +129,9 @@ function Comunidades({
                   </div>
                   <Card.Title as="h3">{community.name}</Card.Title>
                   <Card.Text className="text-muted">{community.members}</Card.Text>
-                  <span className="community-focus d-inline-block mt-3">{community.focus}</span>
+                  <span className="badge rounded-pill bg-success-subtle text-success-emphasis px-3 py-2 mt-3">
+                    {community.focus}
+                  </span>
                 </Card.Body>
               </Card>
             </Col>

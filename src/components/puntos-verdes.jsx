@@ -86,11 +86,11 @@ function PuntosVerdes() {
   }, [retry]);
 
   return (
-    <section id="puntos-verdes" className="green-points-section">
+    <section id="puntos-verdes" className="py-5">
       <Container>
-        <div className="section-heading text-center mb-4">
-          <p className="eyebrow">Encontrá dónde reciclar</p>
-          <h2>Puntos verdes en San Miguel de Tucumán</h2>
+        <div className="text-center mb-4">
+          <p className="text-success text-uppercase fw-bold small">Encontrá dónde reciclar</p>
+          <h2 className="display-6 fw-bold">Puntos verdes en San Miguel de Tucumán</h2>
           <p className="text-muted">
             Sitios de reciclaje publicados en OpenStreetMap. El listado puede no incluir
             todos los puntos oficiales y depende de los datos disponibles.
@@ -106,12 +106,12 @@ function PuntosVerdes() {
           </Alert>
         )}
 
-        <div className="green-points-map-wrap">
+        <div className="overflow-hidden rounded-4 border shadow-sm">
           <MapContainer
             center={cityCenter}
             zoom={13}
             scrollWheelZoom={false}
-            className="green-points-map"
+            className="w-100 green-points-map"
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

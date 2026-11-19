@@ -23,27 +23,27 @@ const slides = [
 
 function Carrousel() {
   return (
-    <section id="lugares" className="carousel-section py-5">
+    <section id="lugares" className="bg-body-tertiary py-5">
       <Container>
-        <div className="section-heading text-center mb-4">
-          <p className="eyebrow">Lugares de impacto</p>
-          <h2>Proyectos en movimiento</h2>
+        <div className="text-center mb-4">
+          <p className="text-success text-uppercase fw-bold small">Lugares de impacto</p>
+          <h2 className="display-6 fw-bold">Proyectos en movimiento</h2>
         </div>
 
         <Row className="justify-content-center">
           <Col lg={8}>
-            <Carousel fade className="eco-carousel">
+            <Carousel fade>
               {slides.map((slide) => (
                 <Carousel.Item key={slide.title}>
-                  <div className="carousel-panel">
-                    <div className="carousel-content d-flex flex-column flex-md-row">
-                      <div className="carousel-copy d-flex flex-column justify-content-center text-center text-md-start p-4 p-md-5">
-                        <h3>{slide.title}</h3>
-                        <p>{slide.text}</p>
+                  <div className="bg-success text-white rounded-4 overflow-hidden shadow">
+                    <div className="row g-0">
+                      <div className="col-md-6 d-flex flex-column justify-content-center text-center text-md-start p-4 p-md-5">
+                        <h3 className="h2">{slide.title}</h3>
+                        <p className="mb-0">{slide.text}</p>
                       </div>
 
-                      <div className="carousel-image-wrap">
-                        <img src={slide.image} alt={slide.title} />
+                      <div className="col-md-6 ratio ratio-4x3">
+                        <img className="w-100 h-100 object-fit-cover" src={slide.image} alt={slide.title} />
                       </div>
                     </div>
                   </div>

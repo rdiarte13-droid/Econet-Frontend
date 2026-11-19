@@ -2,13 +2,13 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 function Contacto() {
   return (
-    <section id="contacto" className="contact-section py-5">
+    <section id="contacto" className="py-5">
       <Container>
         <Row className="align-items-center g-5">
           <Col lg={6}>
-            <div className="section-heading mb-4">
-              <p className="eyebrow">Contacto</p>
-              <h2>Sumate a la red EcoNet</h2>
+            <div className="mb-4">
+              <p className="text-success text-uppercase fw-bold small">Contacto</p>
+              <h2 className="display-6 fw-bold">Sumate a la red EcoNet</h2>
             </div>
             <p className="text-muted">
               Si querés colaborar, organizar una acción o formar parte de una comunidad,
@@ -17,7 +17,7 @@ function Contacto() {
           </Col>
 
           <Col lg={6}>
-            <Form className="contact-form shadow-sm">
+            <Form className="bg-body-tertiary border rounded-4 p-4 shadow-sm">
               <Form.Group className="mb-3">
                 <Form.Label>Nombre</Form.Label>
                 <Form.Control type="text" placeholder="Tu nombre" />

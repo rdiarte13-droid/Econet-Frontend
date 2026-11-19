@@ -8,9 +8,9 @@ function Foro({
   return (
     <main className="py-5">
       <Container>
-        <div className="section-heading text-center">
-          <p className="eyebrow">{eyebrow}</p>
-          <h1>{title}</h1>
+        <div className="text-center">
+          <p className="text-success text-uppercase fw-bold small">{eyebrow}</p>
+          <h1 className="display-6 fw-bold">{title}</h1>
           <p className="text-muted">{description}</p>
         </div>
       </Container>
