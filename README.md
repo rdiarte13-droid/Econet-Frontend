@@ -30,7 +30,6 @@ Vite mostrará en la terminal la dirección local para abrir la aplicación en e
 - React Bootstrap y Bootstrap
 - React Router DOM
 
-
 ## Comandos disponibles
 
 ```bash
